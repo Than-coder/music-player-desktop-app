@@ -1,0 +1,10 @@
+{
+  "dest": "deb/",
+  "icon": "icon/icon.png",
+  "categories": [
+    "Audio"
+  ],
+  "lintianOverrides": [
+    "changelog-file-missing-in-native-package"
+  ]
+}
