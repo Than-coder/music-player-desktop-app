@@ -2,8 +2,12 @@ const electron = require('electron');
 const path = require('path');
 
 
+<<<<<<< HEAD
 const { showMessageBoxSync } = electron.dialog;
 const { app,BrowserWindow,Menu} = electron;
+=======
+const { app,BrowserWindow,Menu,ipcMain } = electron;
+>>>>>>> 84952e908e35f2dd0638b2ecc5fcddb162c59b3d
 
 let home_window = null;
 let main_menu = null;
@@ -55,6 +59,7 @@ function Init(){
       ]
     },
     {
+<<<<<<< HEAD
       label:'Help',
       submenu:[
         {
@@ -64,6 +69,9 @@ function Init(){
           }
         }
       ]
+=======
+      label:'Help'
+>>>>>>> 84952e908e35f2dd0638b2ecc5fcddb162c59b3d
     }
   ];
   //when home window close
@@ -81,6 +89,7 @@ function Init(){
   
 }
 
+<<<<<<< HEAD
 // show_help
 function show_about(){
   showMessageBoxSync(null,{
@@ -93,6 +102,9 @@ function show_about(){
     Live in Myanmar`
   })
 }
+=======
+
+>>>>>>> 84952e908e35f2dd0638b2ecc5fcddb162c59b3d
 
 app.on('ready',()=>{
   Init();
