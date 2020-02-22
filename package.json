@@ -1,0 +1,35 @@
+{
+  "name": "TZWMusic",
+  "version": "1.3.0",
+  "description": "TZW Music Player Developed By Than",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder build --linux",
+    "postinstall": "electron-builder install-app-deps",
+    "rebuild": "electron-rebuild -f -w sqlite3",
+    "package-linux": "electron-packager . TZWMusic --overwrite --asar=true --platform=linux --arch=x64 --icon=icon/icon.png --prune=true --out=builds",
+    "build-deb": "electron-installer-debian --src builds/TZWMusic-linux-x64/ --arch amd64 --config debian.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^7.1.12",
+    "electron-builder": "^21.2.0",
+    "electron-installer-debian": "^3.0.0",
+    "electron-packager": "^14.2.1",
+    "electron-rebuild": "^1.10.0"
+  },
+  "dependencies": {
+    "ffmetadata": "^1.6.0",
+    "music-metadata": "^5.0.2"
+  },
+  "build": {
+    "linux": {
+      "target": [
+        "AppImage"
+      ]
+    }
+  }
+}
