@@ -1,26 +1,15 @@
 {
-<<<<<<< HEAD
   "name": "TZWMusic",
   "version": "1.3.0",
   "description": "TZW Music Player Developed By Than",
-=======
-  "name": "Music",
-  "version": "1.0.0",
-  "description": "Music Player",
->>>>>>> 84952e908e35f2dd0638b2ecc5fcddb162c59b3d
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "build": "electron-builder build --linux",
     "postinstall": "electron-builder install-app-deps",
     "rebuild": "electron-rebuild -f -w sqlite3",
-<<<<<<< HEAD
     "package-linux": "electron-packager . TZWMusic --overwrite --asar=true --platform=linux --arch=x64 --icon=icon/icon.png --prune=true --out=builds",
     "build-deb": "electron-installer-debian --src builds/TZWMusic-linux-x64/ --arch amd64 --config debian.json"
-=======
-    "package-linux": "electron-packager . Music --overwrite --asar=true --platform=linux --arch=x64 --icon=icon/icon.png --prune=true --out=release-builds",
-    "build-deb":"electron-installer-debian --src release-builds/Music-linux-x64/ --arch amd64 --config debian.json"
->>>>>>> 84952e908e35f2dd0638b2ecc5fcddb162c59b3d
   },
   "keywords": [],
   "author": "",
@@ -33,10 +22,7 @@
     "electron-rebuild": "^1.10.0"
   },
   "dependencies": {
-<<<<<<< HEAD
     "ffmetadata": "^1.6.0",
-=======
->>>>>>> 84952e908e35f2dd0638b2ecc5fcddb162c59b3d
     "music-metadata": "^5.0.2"
   },
   "build": {

@@ -43,7 +43,6 @@ img {
   width: 300px;
   height: 270px;
   margin-bottom: 10px;
-<<<<<<< HEAD
   position: relative;
   
 }
@@ -76,10 +75,6 @@ img {
 .right-click li:first-child {
   margin-top: 0;
 }
-=======
-  
-}
->>>>>>> 84952e908e35f2dd0638b2ecc5fcddb162c59b3d
 
 .music-cover img {
   /* display: none; */
@@ -95,10 +90,7 @@ img {
 }
 .music-list li {
   font-size: 14px;
-<<<<<<< HEAD
   word-wrap: nowrap;
-=======
->>>>>>> 84952e908e35f2dd0638b2ecc5fcddb162c59b3d
 }
 .music-list .active {
   background: rgb(66, 182, 43);
@@ -123,11 +115,7 @@ img {
   cursor: pointer;
   padding: 5px;
 }
-<<<<<<< HEAD
 .music-list li{
-=======
-.music-list li:hover {
->>>>>>> 84952e908e35f2dd0638b2ecc5fcddb162c59b3d
   background: rgb(90, 89, 89);
 }
 

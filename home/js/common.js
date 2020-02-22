@@ -1,7 +1,6 @@
 const path = require('path');
 const fs = require('fs');
 const mm = require('music-metadata');
-<<<<<<< HEAD
 const fm = require('ffmetadata');
 const os = require('os');
 
@@ -101,9 +100,6 @@ function get_meta(file){
 
 /////////////////////
 // file
-=======
-
->>>>>>> 84952e908e35f2dd0638b2ecc5fcddb162c59b3d
 function file_tester(file){
   let stat = fs.lstatSync(file);
     if(stat.isFile()){
@@ -181,7 +177,6 @@ async function file_to_object(file){
   return file_obj;
 }
 
-<<<<<<< HEAD
 // save meta to img
 function save_meta_to_img(file,data){
   try {
@@ -195,10 +190,6 @@ function save_meta_to_img(file,data){
 ////////////////////////
 // local storage
 // get
-=======
-
-// local storage
->>>>>>> 84952e908e35f2dd0638b2ecc5fcddb162c59b3d
 function get_storage(key){
   let json = localStorage.getItem(key);
   if(json){
@@ -207,20 +198,12 @@ function get_storage(key){
     return null;
   }
 }
-<<<<<<< HEAD
 //set
-=======
-
->>>>>>> 84952e908e35f2dd0638b2ecc5fcddb162c59b3d
 function set_storage(key,value){
   localStorage.setItem(key,JSON.stringify(value));
   return 'success';
 }
-<<<<<<< HEAD
 ///////////////////
-=======
-
->>>>>>> 84952e908e35f2dd0638b2ecc5fcddb162c59b3d
 // dom
 function $(data){
   return document.querySelector(data);
@@ -229,7 +212,6 @@ function $(data){
 function on(dom,event,cb){
   dom.addEventListener(event,cb);
 }
-<<<<<<< HEAD
 /////////////////////
 
 module.exports = {
@@ -247,13 +229,6 @@ module.exports = {
   file_to_object,
   file_tester,
   save_meta_to_img,
-=======
-
-module.exports = {
-  folder_to_files,
-  file_to_object,
-  file_tester,
->>>>>>> 84952e908e35f2dd0638b2ecc5fcddb162c59b3d
   // music metadata
   file_to_metadata,
   // local storage

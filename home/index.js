@@ -71,7 +71,6 @@ function on_click(name){
 }
 
 
-<<<<<<< HEAD
 // open cover file
 function open_cover_file(){
   comm.$('.right-click').style.display = 'none';
@@ -128,10 +127,6 @@ comm.on(comm.$('.music-cover'),'mousedown',e =>{
 
 // electron listener
 // open file
-=======
-
-// electron listener
->>>>>>> 84952e908e35f2dd0638b2ecc5fcddb162c59b3d
 ipcRenderer.on('choose-file',async ()=> {
   let dia = showOpenDialogSync({
     properties:['multiSelections'],
@@ -172,8 +167,4 @@ ipcRenderer.on('choose-folder',async ()=> {
 })
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 84952e908e35f2dd0638b2ecc5fcddb162c59b3d
 Home.Init()

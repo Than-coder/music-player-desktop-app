@@ -25,13 +25,8 @@ class Player {
     // event listener
     this.event_listener();
   }
-<<<<<<< HEAD
   // show cover
   static async show_cover(file){
-=======
-
-  static async set_conver(file){
->>>>>>> 84952e908e35f2dd0638b2ecc5fcddb162c59b3d
     try {
       let meta = await comm.file_to_metadata(`${file.dir}/${file.filename}`);
       if(meta.picture){
@@ -47,7 +42,6 @@ class Player {
       console.log(err)
     }
   }
-<<<<<<< HEAD
   // set cover metadata
   static async set_cover_file(img){
     let file = this.files[this.index];
@@ -83,8 +77,6 @@ class Player {
     }
     
   }
-=======
->>>>>>> 84952e908e35f2dd0638b2ecc5fcddb162c59b3d
 
   static async set_index(index=0){
     return new Promise((succ,rej)=>{
@@ -99,11 +91,7 @@ class Player {
         // volume
         this.audio.volume = this.volume;
         // conver
-<<<<<<< HEAD
         this.show_cover(file);
-=======
-        this.set_conver(file);
->>>>>>> 84952e908e35f2dd0638b2ecc5fcddb162c59b3d
         
         this.audio.onloadedmetadata = ()=>{
           // set storage
@@ -274,10 +262,7 @@ class Player {
         await this.set_index(i);
         this.audio.play();
         this.ui_play_btn();
-<<<<<<< HEAD
         this.UI();
-=======
->>>>>>> 84952e908e35f2dd0638b2ecc5fcddb162c59b3d
       }
     })
   }
@@ -372,21 +357,13 @@ class Player {
   }
 
 }
-<<<<<<< HEAD
 // show song title
-=======
-
->>>>>>> 84952e908e35f2dd0638b2ecc5fcddb162c59b3d
 function song_title_filter(name){
   name = name.trim()
   name = name.replace(/-/igm,'');
   let start = name.substring(0,10);
   let end = name.substring(name.length - 15,name.length);
-<<<<<<< HEAD
   name = name.length > 23 ? `${start}...${end}` : name;
-=======
-  name = `${start}...${end}`;
->>>>>>> 84952e908e35f2dd0638b2ecc5fcddb162c59b3d
   return name;
 }
 
