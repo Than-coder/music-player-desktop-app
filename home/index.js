@@ -96,32 +96,55 @@ function save_cover_file(){
   Music_Player.save_cover_file();
 }
 
+// show cover option box
+function show_cover_option(e){
+  if(e.which == 3){
+    let width = comm.$('.music-cover').clientWidth;
+    let height = comm.$('.music-cover').clientHeight;
+    let x = e.offsetX;
+    let y = e.offsetY;
+    let box = {
+      p_y:Math.floor((y / height) * 100),
+      p_x: Math.floor((x / width ) * 100),
+      width:comm.$('.right-click').clientWidth,
+      height:comm.$('.right-click').clientHeight
+    }
+    comm.$('.right-click').style.display = 'block';
+
+    comm.$('.right-click').style.top = `${box.p_y}%`;
+    comm.$('.right-click').style.left = `${box.p_x}%`;
+    if(box.p_y > 50 && box.p_x > 50){
+      let right_side = ((x - box.width) / width ) * 100;
+      let bottom_side = ((y - box.height) / height) * 100;
+      comm.$('.right-click').style.top = `${bottom_side}%`;
+      comm.$('.right-click').style.left = `${right_side}%`;
+    }else if(box.p_x > 50){
+      let right_side = ((x - box.width) / width ) * 100;
+      comm.$('.right-click').style.top = `${box.p_y}%`;
+      comm.$('.right-click').style.left = `${right_side}%`;
+    }else if(box.p_y > 50){
+      let bottom_side = ((y - box.height) / height) * 100;
+      comm.$('.right-click').style.top = `${bottom_side}%`;
+    }
+    
+  }
+}
+
 
 // javascrpt enventlistener
 
 // body event
 comm.on(comm.$('body'),'click',e =>{
-  if(e.target != comm.$('.music-cover') && e.target != comm.$('.right-click') && e.target != comm.$('.music-cover img') && e.target != comm.$('.music-list')){
+  
+  if(e.target != comm.$('.right-click') && e.target != comm.$('.music-list')){
     comm.$('.right-click').style.display = 'none';
   }
 })
 
 // cover mouse right click
 comm.on(comm.$('.music-cover'),'mousedown',e =>{
-  if(e.which == 3){
-    let width = comm.$('.music-cover').clientWidth;
-    let height = comm.$('.music-cover').clientHeight;
-    let x = e.offsetX;
-    let y = e.offsetY;
-    let mouse_option_box = {
-      top:(y / height) * 100,
-      left: (x / width ) * 100
-    }
-    comm.$('.right-click').style.display = 'block';
-    comm.$('.right-click').style.top = `${mouse_option_box.top}%`;
-    comm.$('.right-click').style.left = `${mouse_option_box.left}%`;
-    // open_cover_file();
-  }
+  show_cover_option(e);
+  
 })
 
 

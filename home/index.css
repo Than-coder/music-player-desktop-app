@@ -10,6 +10,7 @@ body {
   background: rgb(58, 58, 58);
   color: #fff;
   position: relative;
+  overflow: hidden;
 }
 .background {
   position: fixed;
@@ -48,10 +49,11 @@ img {
 }
 /*mouse right-click */
 .right-click {
-  display: none;
+  /* display: none; */
   position: absolute;
-  left: 0;
-  top: 0;
+  /* left: 0; */
+  /* right: 0; */
+  /* top: 0; */
   z-index: 1;
   list-style: none;
   background: rgb(153, 153, 153);
