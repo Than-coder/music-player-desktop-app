@@ -36,7 +36,8 @@
             "ia32"
           ]
         }
-      ]
+      ],
+      "icon":"icon/icon.ico"
     }
   }
 }
