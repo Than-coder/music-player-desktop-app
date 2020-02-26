@@ -10,7 +10,7 @@ let main_menu = null;
 
 function Init(){
   home_window = new BrowserWindow({
-    icon:path.join(__dirname,'icon/icon.png'),
+    icon:path.join(__dirname,'icon/linux/256x256.png'),
     width:400,
     height: 500,
     minWidth:400,
