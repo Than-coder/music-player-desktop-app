@@ -14,7 +14,7 @@
   "author": "Than<thainzawwin2016@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^7.1.12",
+    "electron": "^7.2.4",
     "electron-builder": "^21.2.0"
   },
   "dependencies": {
